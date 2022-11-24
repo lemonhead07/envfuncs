@@ -24,8 +24,14 @@ def main():
                 for i in files:
                     with open(i) as fsub:
                         test1 = fsub.read()
-                        print(test1)
                         f.write(test1)
+        
+        else:
+            for file in args:
+                with open(file) as f:
+                    print(f.read(), end="", file=sys.stdout)
+                    
+
         # TODO: check if file exists, if it doesnt, check if '-' was inputted check  if it wasnt show an error
 
 
